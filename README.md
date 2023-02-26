@@ -5,6 +5,7 @@ A Pong/Breakout hybrid with some odd features and twists.
 This repository contains the **Zesty Zombies** team's submission for the [9th Python Discord Code Jam](https://www.pythondiscord.com/events/code-jams/9/).
 
 The planning document is available [here](https://docs.google.com/document/d/1tSLVY6UtiPd9_nb_SqX0iz_ja2lJUBb2YvVplKj6tY8/edit?usp=sharing), and the presentation video is [here](https://youtu.be/Bm-WyYzRjXk).
+
 ## Table of Contents
 
 - [Pongout](#pongout)
@@ -130,7 +131,7 @@ The client and server communicate using [WebSockets](https://pypi.org/project/we
 
 The client sends messages to update the server with its current paddle position.
 
-```json
+```jsonc
 {
   "type": "paddle", // Paddle position update message
   "data": [0, 0] // Paddle coordinates
@@ -139,7 +140,7 @@ The client sends messages to update the server with its current paddle position.
 
 The client also sends an `init` message to notify the server that it would like to join.
 
-```json
+```jsonc
 {
   "type": "init" // Server join request message
 }
@@ -147,7 +148,7 @@ The client also sends an `init` message to notify the server that it would like 
 
 The server broadcasts messages containing the game state to all clients continuously.
 
-```json
+```jsonc
 {
     "type": "updates", // Game state update message
     "data": {
@@ -183,7 +184,7 @@ The server broadcasts messages containing the game state to all clients continuo
 
 The server also broadcasts events.
 
-```json
+```jsonc
 {
     "type": "join", // Player join event message
     "data": {
@@ -194,14 +195,14 @@ The server also broadcasts events.
 
 ```
 
-```json
+```jsonc
 {
     "type": "leave", // Player leave event message
     "data": 0 // Number of the player who left
 }
 ```
 
-```json
+```jsonc
 {
     "type": "new_powerup", // Powerup activation event message
     "data": {
@@ -237,7 +238,7 @@ As well as some minor fixes:
 The **Zesty Zombies** team consists of the following members:
 
 - [nitinramvelraj](https://github.com/nitinramvelraj) (team leader)
-- [LemonPi314](https://github.com/LemonPi314)
+- [Lemonyte](https://github.com/lemonyte)
 - [pmsharp2](https://github.com/pmsharp2)
 - [ilcheese2](https://github.com/ilcheese2)
 - [striker4150](https://github.com/striker4150)
@@ -246,4 +247,4 @@ The **Zesty Zombies** team consists of the following members:
 
 This code is licensed under the [MIT license](LICENSE).
 
-Assets in the `images` directory are licensed under the [MIT license](LICENSE) and created by [LemonPi314](https://github.com/LemonPi314).
+Assets in the `images` directory are licensed under the [MIT license](LICENSE) and created by [Lemonyte](https://github.com/lemonyte).
