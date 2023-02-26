@@ -283,7 +283,7 @@ class GameView(arcade.View):
             else:
                 player = f"Player {self.client.powerup_message_data[0] + 1}"
             arcade.draw_text(
-                # I didn't write this globals() stuff but if it works I'd better not touch it  -- LemonPi314
+                # I didn't write this globals() stuff but if it works I'd better not touch it  -- Lemonyte
                 f"{player} used {globals()[self.client.powerup_message_data[1]].to_string()}",
                 100,
                 600,
